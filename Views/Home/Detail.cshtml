@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Detail";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .detail-container {
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .detail-container .product-info {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-detail {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="detail-container">
+        <h1>Product Detail</h1>
+        <p class="product-info">
+            Below are the detailed specifications of the product you're interested in.
+        </p>
+
+        <div class="product-detail">
+            <strong>Product Name:</strong> Example Product Name<br>
+            <strong>Price:</strong> $499.99<br>
+            <strong>Description:</strong> This product is a high-quality electronic gadget offering cutting-edge features for modern users.<br>
+            <strong>Specifications:</strong>
+            <ul>
+                <li>Screen Size: 6.5 inches</li>
+                <li>Battery Life: 12 hours</li>
+                <li>Processor: Octa-core</li>
+                <li>Storage: 128 GB</li>
+            </ul>
+        </div>
+
+        <a href="/Product/Index" class="back-link">Back to List</a>
+    </div>
+</body>
+</html>

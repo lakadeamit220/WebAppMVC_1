@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <style>
+        .product-list-container {
+            max-width: 80%;
+            margin: 0 auto;
+            margin-bottom: 20px; /* Ensures no overlap with the footer */
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* Adds horizontal scrolling if needed */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1; /* Keeps headers above content */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+            a:hover {
+                color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <div class="product-list-container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Product List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td>@product.Name</td>
+                        <td>@product.Price.ToString("C")</td>
+                        <td>@product.Description</td>
+                        <td><a href="/Product/Details/@product.Id">View</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
